@@ -6,13 +6,13 @@
 	2. Seed the dynamic menu if there are no entries.  Add additional dynamic menu if called by admin.
 *********************************************************************************/
 
-class AA_AddDynamicMenu_break {
+class AA_AddDynamicMenu {
 
 	/*********************************************************************************
 		Seed the dynamic menu if there are no entries during activation ($user_created = 0).  
 		Add additional dynamic menu if called by admin ($user_created = 1).
 	*********************************************************************************/
-	static function add_menu_break( $dynamic_menu_exists, $user_created ) {
+	static function add_menu( $dynamic_menu_exists, $user_created ) {
 		global $wpdb, $current_datetime, $current_date, $dynamic_submenu_count;
 
 			// Seed the dynamic menu with a notional WP menu called 'top-nav-menu'.  Plugin needs at least one WP menu to associate with.
